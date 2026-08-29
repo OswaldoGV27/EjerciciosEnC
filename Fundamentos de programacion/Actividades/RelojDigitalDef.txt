@@ -1,0 +1,95 @@
+Algoritmo sin_titulo
+	
+	// Oswaldo Gil Valentin 1CV8
+	// Definimos las variables que vamos a utilizar para el reloj
+	Definir Hora, Minuto, Segundo0 Como Entero;
+	Escribir "Inserte la hora actual de su localidad en formato de 24 Horas";
+	Leer Hora
+	Escribir "Inserte los minutos de su hora actual";
+	Leer Minuto
+	Escribir "Inserte los segundos de su hora actual";
+	Leer Segundo0
+	
+	//Variables de la alarma
+	Definir h,m,s Como Entero;
+	Escribir "Ingresa en cuantas horas inicia la alarma";
+	Leer h
+	Escribir "Ingrese en cuantos minutos inicia la alarma";
+	Leer m
+	Escribir "Ingrese en cuantos segundos inicia la alarma";
+	Leer s
+	
+	//Creación de la cadena de Reloj 
+	
+	Mientras Hora <= 23 Hacer
+		Mientras Minuto <= 59 Hacer
+			Mientras Segundo0 <= 59 Hacer
+				Limpiar Pantalla
+				Si Hora > 9 Entonces
+					Escribir Hora Sin saltar;
+				SiNo
+					Escribir "0", Hora Sin saltar;
+				FinSi
+				
+				Si Minuto > 9 entonces
+					Escribir ":", Minuto Sin Saltar;
+				SiNo
+					Escribir ":0", Minuto Sin Saltar;
+				FinSi
+				
+				Si Segundo0 > 9 Entonces
+					Escribir ":", Segundo0;
+				SiNo
+					Escribir ":0", Segundo0;
+				FinSi
+				Segundo0 = Segundo0 +1;
+				Esperar 1000 Milisegundos;
+				
+				Mientras h>=0 Hacer
+					Mientras m>=0 Hacer
+						Mientras s>=0 Hacer
+							Limpiar Pantalla
+							Si h>9 Entonces
+								Escribir h Sin Saltar;
+							SiNo
+								Escribir "0", h Sin Saltar;
+							FinSi
+							
+							Si m>9 Entonces
+								Escribir ":", m Sin Saltar;
+							SiNo
+								Escribir ":0", m Sin Saltar;
+							FinSi
+							
+							Si s>9 Entonces
+								Escribir ":", s;
+							SiNo
+								Escribir ":0", s;
+							FinSi
+							Esperar 1 segundo
+							s=s-1
+						FinMientras
+						s=59
+						m=m-1
+					FinMientras
+					m=59
+					h=h-1
+					Escribir "ALARMA INICIADA";
+				FinMientras
+				
+				
+			FinMientras
+			Segundo0 = 0
+			Minuto = Minuto +1
+		FinMientras
+		Minuto = 0;
+		Hora = Hora +1;
+		Si Hora == 24 Entonces
+			Hora = 0;
+		FinSi
+	FinMientras
+	
+	//Creación de la alarma
+	
+	
+FinAlgoritmo

@@ -1,0 +1,28 @@
+Algoritmo EjercicioConEstrucutrasDEIteracion
+	//Ejercicio con estructuras de Iteracion
+	//Oswaldo Gil VAlentín 1CV8
+	Escribir "A continuación se mostrará una secuencia del 1 al 100 y";
+	Escribir "del 100 al 1 separandolos por par e impar";
+	
+	definir a como entero;
+	a=1
+	Escribir "Del 1 al 100";
+	Para a=1 Hasta 100 con paso 1 Hacer
+		Si a mod 2 == 0 Entonces
+			Escribir "El número ", a," es par";
+		SiNo
+			Escribir "El numero ", a," es impar";
+		FinSi
+	FinPara
+	
+	a=100
+	Escribir "Del 100 al 1";
+	Para a=100 Hasta 1 con paso -1 Hacer 
+		si a mod 2 == 0 Entonces
+			Escribir "El numero ", a," es par";
+		SiNo
+			Escribir "El numero ", a," es impar";
+		FinSi
+	FinPara
+
+FinAlgoritmo

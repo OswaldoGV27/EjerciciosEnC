@@ -1,0 +1,52 @@
+Algoritmo RelojDigital
+	
+	// Oswaldo Gil Valentin 1CV8
+	// Definimos las variables que vamos a utilizar para el reloj
+	
+	Definir Hora, Minuto, Segundo0 Como Entero;
+	Escribir "Inserte la hora actual de su localidad en formato de 24 Horas";
+	Leer Hora
+	Escribir "Inserte los minutos de su hora actual";
+	Leer Minuto
+	Escribir "Inserte los segundos de su hora actual";
+	Leer Segundo0
+	
+	//Creación de la alarma
+	
+	
+	//Creación de la cadena de Reloj 
+	
+	Mientras Hora <= 23 Hacer
+		Mientras Minuto <= 59 Hacer
+			Mientras Segundo0 <= 59 Hacer
+				Limpiar Pantalla
+				Si Hora > 9 Entonces
+					Escribir Hora Sin saltar;
+				SiNo
+					Escribir "0", Hora Sin saltar;
+				FinSi
+				
+				Si Minuto > 9 entonces
+					Escribir ":", Minuto Sin Saltar;
+				SiNo
+					Escribir ":0", Minuto Sin Saltar;
+				FinSi
+				
+				Si Segundo0 > 9 Entonces
+					Escribir ":", Segundo0;
+				SiNo
+					Escribir ":0", Segundo0;
+				FinSi
+				Segundo0 = Segundo0 +1;
+				Esperar 1000 Milisegundos;
+			FinMientras
+			Segundo0 = 0
+			Minuto = Minuto +1
+		FinMientras
+		Minuto = 0;
+		Hora = Hora +1;
+		Si Hora == 24 Entonces
+			Hora = 0;
+		FinSi
+	FinMientras
+FinAlgoritmo
